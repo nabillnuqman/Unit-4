@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function translator(){
+        var input = document.getElementById("userinput").value;
+        var translate = input.slice(1)+input.slice(0,1)+"ay";
+        document.getElementById("output").innerHTML=translate;
+        console.log(translate)
+     }
+</script>
+<body>
+<h1> Pig latin </h1>
+
+<p> enter word </p> <br>
+<input type="text"id="userinput">
+<button type="button" onclick="translator()">enter</button> <br>
+<h3> the pig latin is: </h3> <p id="output"></p>
+</body>
+</html>

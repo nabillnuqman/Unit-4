@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function counter(){
+        var input = document.getElementById("userinput").value;
+        var vowelz = 0;
+        var a = 0;
+        var e = 0;
+        var i = 0;
+        var o = 0;
+        var u = 0;
+        var string = input.toString();
+        for (var i = 0; i <= string.length - 1; i++) {
+            if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+                vowelz += 1;}
+            if (string.charAt(i) == "a"){
+                a += 1;}
+            if (string.charAt(i) == "e"){
+                e += 1;}
+            if (string.charAt(i) == "i"){
+                i += 1;}
+            if (string.charAt(i) == "o"){
+                o += 1;}
+            if (string.charAt(i) == "u"){
+                u += 1;}
+        }
+        document.getElementById("novowels").innerHTML=vowelz;
+        document.getElementById("outputa").innerHTML=a;
+        document.getElementById("outpute").innerHTML=e;
+        document.getElementById("outputi").innerHTML=i;
+        document.getElementById("outputo").innerHTML=o;
+        document.getElementById("outputu").innerHTML=u;
+        console.log(vowelz)
+        }
+</script>
+<body>
+<h1> Vowel counter </h1>
+
+<p> enter a sentence </p> <br>
+<input type="text"id="userinput">
+<button type="button" onclick="counter()">enter</button> <br>
+<h2> Number of vowels:</h2> <p id="novowels"></p><br>
+<h3> a: </h3> <p id="outputa"></p> <br>
+<h3> e: </h3> <p id="outpute"></p> <br>
+<h3> i: </h3> <p id="outputi"></p> <br>
+<h3> o: </h3> <p id="outputo"></p> <br>
+<h3> u: </h3> <p id="outputu"></p> <br>
+</body>
+</html>

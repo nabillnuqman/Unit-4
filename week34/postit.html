@@ -1,0 +1,30 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #divID{
+        width: 320px;
+        background: Cornsilk;
+        padding: 10px;
+        border: 5px solid gray;
+        margin: 0;
+        }
+    </style>
+<script>
+function postit()
+{
+    var input = document.getElementById('userinput')
+    var div = document.getElementById('divID');
+    div.innerHTML = div.innerHTML + input.value;
+}
+</script>
+</head>
+<body>
+
+Enter input: <input type="text" id="userinput">
+<button type="button" onclick="postit()">enter</button> <br>
+
+<div id="divID"></div>
+
+</body>
+</html>
